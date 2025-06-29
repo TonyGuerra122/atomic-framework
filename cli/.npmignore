@@ -1,0 +1,30 @@
+# Ignore TypeScript source files
+src/
+scripts/
+template/
+
+# Ignore configuration and environment files
+*.log
+*.env
+.env.*
+.vscode/
+*.tsbuildinfo
+
+# Ignore test-related files
+tests/
+__tests__/
+*.spec.ts
+*.test.ts
+
+# Ignore dev tools and cache
+node_modules/
+dist/**/*.map
+coverage/
+.nyc_output/
+
+# Ignore misc files
+.DS_Store
+Thumbs.db
+
+# Keep only what’s necessary
+!dist/
