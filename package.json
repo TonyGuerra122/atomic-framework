@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/TonyGuerra122/atomic-framework"
+  },
   "bin": {
     "atomic": "dist/cli/init.js"
   },
