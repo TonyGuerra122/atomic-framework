@@ -1,7 +1,6 @@
 import fastify, { FastifyInstance } from 'fastify';
 import cors from '@fastify/cors';
 
-import bootstrap from './bootstrap';
 import { registerRoutes } from './routers/router';
 
 export default class App {
@@ -15,7 +14,6 @@ export default class App {
 
   public async init(): Promise<void> {
     await this._app.register(cors);
-    bootstrap();
     await registerRoutes(this._app);
   }
 

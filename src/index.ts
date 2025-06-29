@@ -1,4 +1,4 @@
-export * from './core/routers/router'; // registerRoutes, etc.
+export * from './core/routers/router';
 export * from './core/decorators/controller';
 export * from './core/decorators/inject';
 export * from './core/decorators/injectable';

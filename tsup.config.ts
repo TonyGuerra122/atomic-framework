@@ -9,5 +9,4 @@ export default defineConfig({
   target: 'node22',
   outDir: 'dist',
   shims: true,
-  onSuccess: 'cp -r template dist/',
 });

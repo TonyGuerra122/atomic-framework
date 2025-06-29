@@ -8,16 +8,30 @@ export function loadModulesFrom(dir: string): void {
   }
 
   const files = fs.readdirSync(dir);
+  const isDev = process.env.NODE_ENV === 'development';
 
   for (const file of files) {
-    const fullPath = path.join(dir, file);
+    let fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       loadModulesFrom(fullPath);
-    } else if (file.endsWith('.js') || file.endsWith('.ts')) {
+    } else {
+      const ext = path.extname(file);
+
+      // Em dev, carrega .ts | Em produção, carrega .js
+      const shouldLoad = (isDev && ext === '.ts') || (!isDev && ext === '.js');
+
+      if (!shouldLoad) continue;
+
+      // Se estiver em produção e o caminho for .ts, troca para .js
+      if (!isDev && fullPath.endsWith('.ts')) {
+        fullPath = fullPath.replace(/\.ts$/, '.js');
+      }
+
       try {
         require(fullPath);
+        console.log(`[atomic] Módulo carregado: ${fullPath}`);
       } catch (error) {
         console.error(`❌ Falha ao carregar o módulo ${fullPath}:`, error);
       }

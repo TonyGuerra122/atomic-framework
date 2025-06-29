@@ -1,6 +1,6 @@
 {
   "name": "@tonyguerradev/atomic-framework",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "The Web API Engine to Atomic Framework written in Node.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -23,8 +23,7 @@
   ],
   "scripts": {
     "dev": "nodemon",
-    "build": "tsc --project tsconfig.build.json && npm run copy:template",
-    "copy:template": "cp -r template dist/",
+    "build": "tsc --project tsconfig.build.json",
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
