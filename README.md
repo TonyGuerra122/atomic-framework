@@ -20,7 +20,7 @@ npm install -g @tonyguerradev/atomic-framework-cli
 ```
 Ou use com `npx`:
 ```bash
-npx atomic-framework init meu-projeto
+npx atomic-framework-cli init meu-projeto
 ```
 
 ---
