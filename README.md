@@ -16,7 +16,7 @@ O **Atomic Framework** é um motor leve e opinativo para construir APIs RESTful 
 Instale o CLI globalmente:
 
 ```bash
-npm install -g atomic-framework
+npm install -g @tonyguerradev/atomic-framework
 ```
 Ou use com `npx`:
 ```bash
