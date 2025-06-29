@@ -21,9 +21,11 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
       const fullPath = (basePath + route.path).replace(/\/+/g, '/');
       const method = route.method;
 
-      const handler = controllerInstance[
-        route.handlerName as keyof typeof controllerInstance
-      ] as (req: FastifyRequest, reply: FastifyReply) => void | Promise<void>;
+      const handler = (
+        controllerInstance[
+          route.handlerName as keyof typeof controllerInstance
+        ] as (req: FastifyRequest, reply: FastifyReply) => void | Promise<void>
+      ).bind(controllerInstance);
 
       const preHandlers: Array<
         (req: FastifyRequest, reply: FastifyReply) => void | Promise<void>
