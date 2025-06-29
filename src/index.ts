@@ -1,0 +1,13 @@
+export * from './core/routers/router'; // registerRoutes, etc.
+export * from './core/decorators/controller';
+export * from './core/decorators/inject';
+export * from './core/decorators/injectable';
+export * from './core/decorators/middleware';
+export * from './core/decorators/atomic';
+export * from './interfaces/middleware.interface';
+export * from './errors/service.exception';
+export * from './core/di/types';
+export * from './enums/http.status';
+export * from './utils/module.util';
+export { default as App } from './core/app';
+export { FastifyRequest as Request, FastifyReply as Response } from 'fastify';

@@ -1,0 +1,17 @@
+# Diretórios de dev
+src/
+template/
+.vscode/
+
+# Configs de compilador, linters e formatadores
+tsconfig.json
+tsconfig.build.json
+tsup.config.ts
+.eslint.config.ts
+.prettierrc.json
+.prettierignore
+.nodemon.json
+
+# Arquivos específicos de dev
+package-lock.json
+.gitignore

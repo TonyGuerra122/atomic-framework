@@ -1,0 +1,49 @@
+{
+  "name": "atomic-framework",
+  "version": "0.0.1",
+  "description": "The Web API Engine to Atomic Framework written in Node.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "atomic": "dist/cli/init.js"
+  },
+  "files": [
+    "dist",
+    "dist/template"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc --project tsconfig.build.json && npm run copy:template",
+    "copy:template": "cp -r template dist/",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "author": "Anthony Guerra",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "jiti": "^2.4.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "dotenv": "^17.0.0",
+    "fastify": "^5.4.0",
+    "mysql2": "^3.14.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.25"
+  }
+}
