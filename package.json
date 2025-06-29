@@ -1,5 +1,5 @@
 {
-  "name": "@tonydev/atomic-framework",
+  "name": "@tonyguerradev/atomic-framework",
   "version": "0.0.1",
   "description": "The Web API Engine to Atomic Framework written in Node.js",
   "main": "dist/index.js",
