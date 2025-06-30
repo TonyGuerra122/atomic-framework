@@ -9,7 +9,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@tonyguerradev/atomic-framework": "^0.0.8",
+    "@tonyguerradev/atomic-framework": "^0.0.9",
     "fastify": "^5.4.0",
     "reflect-metadata": "^0.2.2"
   },

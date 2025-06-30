@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import fastify, { FastifyInstance } from 'fastify';
 import cors from '@fastify/cors';
 
@@ -9,6 +10,7 @@ export default class App {
   private readonly _app: FastifyInstance;
 
   constructor() {
+    dotenv.config();
     this._app = fastify({ logger: true });
   }
 
