@@ -1,6 +1,6 @@
 {
   "name": "@tonyguerradev/atomic-framework",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "The Web API Engine to Atomic Framework written in Node.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

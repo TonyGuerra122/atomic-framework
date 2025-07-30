@@ -1,6 +1,6 @@
 {
   "name": "@tonyguerradev/atomic-framework-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI for Atomic Framework",
   "main": "dist/index.js",
   "bin": {
